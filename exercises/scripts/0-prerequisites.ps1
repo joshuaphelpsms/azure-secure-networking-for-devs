@@ -51,7 +51,7 @@ for ($i = 0; $i -lt 3; $i++) {
     $ResourceGroupName = $ResourceGroupNames[$i]
     $Location = $Locations[$i]
     Write-Output "`nCreating resource group `"${ResourceGroupName}`" in location `"${Location}`"..."
-    az group create --name $ResourceGroupName --location $Location
+    az group create --name $ResourceGroupName --location $Location --tags TeamName=Kraken
 }
 
 Write-Output "`nCreating storage accounts..."
